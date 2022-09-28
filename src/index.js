@@ -20,7 +20,7 @@ let transport = nodemailer.createTransport({
   secure: false,
   auth: {
     user: "comunicaciones@bonetconsulting.com",
-    pass: "BNT8h1x1",
+    pass: "0t340!KSA#4t",
   },
 });
 
@@ -74,10 +74,9 @@ app.use("/contactLanding", (req, res) => {
   const { name, email, asunto, mensaje } = req.body;
   if (email.trim() != "") {
     sendContactMail(name, email, asunto, mensaje);
+    res.redirect("./contact.html");
   } else {
   }
-  res.redirect("contact.html");
-  console.log(email);
 });
 
 // // router.post("/contactLanding", (req, res) => {
